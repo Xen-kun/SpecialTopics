@@ -1,0 +1,129 @@
+.section1 {
+    background-image: url('/public/images/client/bg-homepage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(245, 21, 32, 0.13);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .box-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+    .left-text {
+        flex: 1;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        
+        .fast-delivery, .easy-pickup, .make-order, .bring-pasto, .app-play-store, .todays-dish{
+            margin-left: 100px;
+        }
+
+        .fast-delivery {
+            margin-top: 90px;
+            padding: 0;
+        
+            p {
+                font-size: 10px;
+                margin: 0;
+                padding: 0;  
+            }
+        }
+        
+        .easy-pickup{
+            padding: 0;
+            p{
+                font-weight: bold;
+                font-size: 40px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .make-order {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        
+            .order-btn {
+                background-color: #3490dc;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+        
+                &:hover {
+                    background-color: #2779bd; // Darker blue on hover
+                }
+        
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        
+        .bring-pasto{
+            margin-top: 40px;
+
+            p{
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+
+        .app-play-store{
+            margin-top: 10px;
+
+            .play-store, .app-store{
+                padding: 0;
+                height: 60px;
+            }
+        }
+
+        .todays-dish {
+            margin-top: 40px;
+        
+            a {
+                text-decoration: none;
+                color: rgb(91, 91, 219);
+                width: auto;
+                display: inline-block;
+        
+                &:hover {
+                    color: rgb(28, 28, 172);
+                }
+        
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }        
+    }
+
+    .right-image {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        
+        img {
+            width: 61%;
+            height: auto;
+            margin: 0
+        }
+    }
+}

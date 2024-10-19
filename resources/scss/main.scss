@@ -1,0 +1,19 @@
+
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    background-size: cover;
+    background-color: #EDEDED; 
+    height: auto;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+@import 'colors.scss';
+// @import 'header.scss';
+@import 'homepage/section_1.scss';
+@import 'homepage/section_2.scss';
+@import 'footer.scss';

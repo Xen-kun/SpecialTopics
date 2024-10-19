@@ -1,0 +1,268 @@
+.header {
+    position: fixed;
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    padding: 10px 40px 10px 50px;
+    z-index: 1000;
+  
+    &.scrolled {
+      background-color: $header-color;
+      box-shadow: 0 3px 10px rgba(72, 66, 66, 0.845);
+      backdrop-filter: blur(10px);
+      transition: background-color 0.3s ease-in;
+    }
+  
+    .logo {
+      display: flex;
+    }
+  
+    nav {
+      .mainframe-sidenav {
+        ul {
+          display: flex;
+  
+          li {
+            margin-left: 8px;
+  
+            .main-header {
+              display: flex;
+              align-items: center;
+              font-size: 14px;
+            }
+  
+            .icon {
+              margin-left: 5px;
+              transition: transform 0.3s ease; // Apply transition to icon
+            }
+  
+            &:hover .icon {
+              transform: rotate(90deg); // Rotate icon when hovered or active
+            }
+  
+            a {
+              text-decoration: none;
+              font-family: 'Kanit', sans-serif;
+              color: #ffffff;
+              padding: 10px;
+              transition: color 0.5s ease;
+              position: relative;
+  
+              .icon {
+                margin-left: 5px;
+              }
+  
+              &.active,
+              &:hover {
+                color: $link-color2;
+              }
+            }
+  
+            .submenu {
+              display: none;
+              position: absolute;
+              background-color: $submenu-color;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+              backdrop-filter: blur(5px);
+              width: 200px;
+              flex-direction: row;
+              margin-top: 0px;
+              border-radius: 0 3px 3px 3px;
+  
+              li {
+                margin: 10px;
+                &:hover {
+                  color: $link-color2;
+                }
+              }
+            }
+  
+            &:hover .submenu {
+              display: block;
+            }
+  
+            &:hover .main-header {
+              border-radius: 3px;
+              color: black;
+              background-color: $background;
+              transition: background-color 0.1s ease-in;
+            }
+  
+            @media (max-width: 795px) {
+              &:hover .submenu {
+                display: none; // Ensure submenu is not shown on hover
+              }
+  
+              .submenu {
+                display: none; // Default to hidden
+              }
+  
+              &.active .icon {
+                transform: rotate(90deg); // Rotate icon when hovered or active
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+  
+      &.active span:nth-child(1) {
+        width: 10px;
+        transform: rotate(45deg) translate(11px, 1px);
+      }
+  
+      &.active span:nth-child(2) {
+        opacity: 0;
+      }
+  
+      &.active span:nth-child(3) {
+        width: 10px;
+        transform: rotate(-45deg) translate(11px, -1px);
+      }
+    }
+  
+  
+  
+    @media (max-width: 795px) {
+      display: flex;
+  
+      nav {
+        display: none;
+        &.active {
+          display: flex;
+          position: absolute;
+          min-height: 100vh;
+          top: 0;
+          right: 0;
+          width: 100%;
+          background-color: rgba(245, 245, 245, 0.44);
+          backdrop-filter: blur(-10px);
+          flex-direction: row-reverse;
+  
+          .mainframe-sidenav {
+            display: flex;
+            background-color: $submenu-color;
+            width: 212px;
+            overflow-y: auto; // Enable vertical scrolling
+  
+            ul {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              margin-top: 50px;
+  
+              li {
+                width: 100%;
+                margin: 0;
+  
+                .main-header {
+                  display: flex;
+                  width: 100%;
+                  padding: 10px 20px;
+                  cursor: pointer; // Pointer cursor for clickable items
+                }
+  
+                .submenu {
+                  position: relative;
+                  padding: 10px;
+                  width: 100%;
+                  color: none;
+                  box-shadow: none;
+  
+                  li a {
+                    margin-left: 0px;
+                  }
+  
+                  &.expanded {
+                    display: block; // Show submenu when expanded
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      .hamburger {
+        display: flex;
+        z-index: 50;
+        // border: 1px solid black;
+        span {
+          height: 1px;
+          width: 15px;
+          background: #ffffff;
+          margin: 2px 0;
+          transition: 0.3s;
+        }
+      }
+    }
+  
+    @media (max-width: 431px) {
+      display: flex;
+  
+      nav {
+        display: none;
+        &.active {
+          display: flex;
+          position: absolute;
+          min-height: 100vh;
+          top: 0;
+          width: 100%;
+          background-color: $sidebar-color;
+          backdrop-filter: blur(10px);
+  
+          ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+  
+            li {
+              margin: 0;
+  
+              .main-header {
+                display: flex;
+                padding: 10px 20px;
+                cursor: pointer; // Pointer cursor for clickable items
+              }
+  
+              .submenu {
+                position: relative;
+                padding: 1px;
+                width: 100%;
+  
+                li a {
+                  margin-left: 20px;
+                }
+  
+                &.expanded {
+                  display: block; // Show submenu when expanded
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      .hamburger {
+        display: flex;
+        z-index: 50;
+        span {
+          height: 1px;
+          width: 15px;
+          background: #ffffff;
+          margin: 2px 0;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  
