@@ -1,4 +1,7 @@
+@use 'colors';
+
 .header {
+    border: 1px solid green;
     position: fixed;
     backdrop-filter: blur(2px);
     display: flex;
@@ -6,22 +9,27 @@
     justify-content: space-between;
     top: 0;
     width: 100%;
-    padding: 10px 40px 10px 50px;
     z-index: 1000;
   
     &.scrolled {
-      background-color: $header-color;
+      background-color: colors.$header-color;
       box-shadow: 0 3px 10px rgba(72, 66, 66, 0.845);
       backdrop-filter: blur(10px);
       transition: background-color 0.3s ease-in;
     }
   
-    .logo {
-      display: flex;
+    #logo {
+      border: 1px solid blue;
+      h1{
+        font-size: 20px;
+      }
     }
   
     nav {
+      border: 1px solid red;
+
       .mainframe-sidenav {
+        border: 1px solid rgb(0, 0, 0);
         ul {
           display: flex;
   
@@ -57,14 +65,14 @@
   
               &.active,
               &:hover {
-                color: $link-color2;
+                color: colors.$link-color2;
               }
             }
   
             .submenu {
               display: none;
               position: absolute;
-              background-color: $submenu-color;
+              background-color: colors.$submenu-color;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
               backdrop-filter: blur(5px);
               width: 200px;
@@ -75,7 +83,7 @@
               li {
                 margin: 10px;
                 &:hover {
-                  color: $link-color2;
+                  color: colors.$link-color2;
                 }
               }
             }
@@ -87,7 +95,7 @@
             &:hover .main-header {
               border-radius: 3px;
               color: black;
-              background-color: $background;
+              background-color: colors.$background;
               transition: background-color 0.1s ease-in;
             }
   
@@ -95,11 +103,7 @@
               &:hover .submenu {
                 display: none; // Ensure submenu is not shown on hover
               }
-  
-              .submenu {
-                display: none; // Default to hidden
-              }
-  
+
               &.active .icon {
                 transform: rotate(90deg); // Rotate icon when hovered or active
               }
@@ -149,7 +153,7 @@
   
           .mainframe-sidenav {
             display: flex;
-            background-color: $submenu-color;
+            background-color: colors.$submenu-color;
             width: 212px;
             overflow-y: auto; // Enable vertical scrolling
   
@@ -168,22 +172,6 @@
                   width: 100%;
                   padding: 10px 20px;
                   cursor: pointer; // Pointer cursor for clickable items
-                }
-  
-                .submenu {
-                  position: relative;
-                  padding: 10px;
-                  width: 100%;
-                  color: none;
-                  box-shadow: none;
-  
-                  li a {
-                    margin-left: 0px;
-                  }
-  
-                  &.expanded {
-                    display: block; // Show submenu when expanded
-                  }
                 }
               }
             }
@@ -216,7 +204,7 @@
           min-height: 100vh;
           top: 0;
           width: 100%;
-          background-color: $sidebar-color;
+          background-color: colors.$sidebar-color;
           backdrop-filter: blur(10px);
   
           ul {
@@ -232,20 +220,6 @@
                 display: flex;
                 padding: 10px 20px;
                 cursor: pointer; // Pointer cursor for clickable items
-              }
-  
-              .submenu {
-                position: relative;
-                padding: 1px;
-                width: 100%;
-  
-                li a {
-                  margin-left: 20px;
-                }
-  
-                &.expanded {
-                  display: block; // Show submenu when expanded
-                }
               }
             }
           }

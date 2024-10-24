@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/scss/main.scss', 'resources/js/app.js'])
 </head>
 <body>
-    {{-- @include('partials.header') --}}
+    @include('partials.header')
 
     <section class="section1">
         <div class="box-container">
@@ -15,9 +15,18 @@
             {{-- Left Side Design --}}
             <div class="left-text">
                 {{-- Semi Button --}}
-                <div class="fast-delivery"> 
+                {{-- <div class="fast-delivery">
+                    <div class="fading-box">
+                        <p>Fast Delivery</p>
+                        <img src="{{ asset('images/client/delivery.png') }}" alt="Fast Delivery Icon">
+                    </div>
+                </div> --}}
+
+                <div class="fast-delivery">
                     <p>Fast Delivery</p>
+                    <img src="{{ asset('images/client/delivery.png') }}" alt="Fast Delivery Icon">
                 </div>
+                
 
                 <div class="Easy-pickup">
                     <p>Fast Deliver & <br>Easy Pickup</p>
@@ -34,13 +43,17 @@
                 </div>
 
                 <div class="app-play-store">
-                    <img src="{{ asset('images/client/playstore.png') }}" alt="play store" class="play-store">
-                    <img src="{{ asset('images/client/appstore.png') }}" alt="play store" class="app-store">
+                    <a href="https://play.google.com/store/games?hl=en">
+                        <img src="{{ asset('images/client/appstore.png') }}" alt="play store" id="play-store">
+                    </a>
+                    <a href="https://www.apple.com/ph/app-store/">
+                        <img src="{{ asset('images/client/playstore.png') }}" alt="play store" id="app-store">
+                    </a>
                 </div>
 
                 <div class="todays-dish">
-                    <a href="">
-                        <p>Check for Today's Special Dish</p>
+                    <a href="#">
+                        <p>Check for today's dish →</p>
                     </a>
                 </div>
 
@@ -53,7 +66,11 @@
         </div>
     </section>
     
+    <section id="section2">
+        this is section 2
+        <h1>Hatdog kong malaki</h1>
+    </section>
 
-    {{-- @include('partials.footer') --}}
+    @include('partials.footer')
 </body>
 </html>

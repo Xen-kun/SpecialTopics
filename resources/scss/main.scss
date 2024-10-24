@@ -1,3 +1,10 @@
+// @import 'colors.scss';
+@forward 'colors.scss';
+@forward 'header.scss';
+@forward 'homepage/section_1.scss';
+@forward 'homepage/section_2.scss';
+@forward 'footer.scss';
+
 
 
 body {
@@ -12,8 +19,4 @@ body {
 ::-webkit-scrollbar{
     display: none;
 }
-@import 'colors.scss';
-// @import 'header.scss';
-@import 'homepage/section_1.scss';
-@import 'homepage/section_2.scss';
-@import 'footer.scss';
+
