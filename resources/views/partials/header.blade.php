@@ -1,10 +1,14 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <header class="header">
     <div id="logo">
         <a href="{{ url('/') }}">
-            <h1>Panggaldaw Xpres</h1>
+            <h1>Panggaldaw Xpress</h1>
         </a>           
     </div>
-    {{-- class="navigation" --}}
+    
     <nav>
         <div class="mainframe-sidenav">
             <ul>
@@ -12,20 +16,24 @@
                     <a href="{{ url('/') }}" class="main-header">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="main-header">Services <span class="icon">›</span></a>
+                    <a href="" class="main-header">Service</a>
                 </li>
                 <li>
-                    <a href="#" class="main-header">Menu <span class="icon">›</span></a>
+                    <a href="" class="main-header">Menu</a>
                 </li>
                 <li>
-                    <a href="/careers" class="main-header">Careers <span class="icon"></span></a>
-                </li>
-                <li>
-                    <a href="/contact" class="main-header">Contact</a>
+                    <a href="" class="main-header">Shops</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+     <!-- Search Bar -->
+     <form class="seach-bar" action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>    
+    
     <div class="hamburger" onclick="showSidebar()">
         <span></span>
         <span></span>

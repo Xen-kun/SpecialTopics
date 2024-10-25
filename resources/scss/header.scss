@@ -1,12 +1,12 @@
 @use 'colors';
 
 .header {
-    border: 1px solid green;
+    border: 2px solid green;
     position: fixed;
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -20,223 +20,190 @@
   
     #logo {
       border: 1px solid blue;
-      h1{
-        font-size: 20px;
+      a {
+          text-decoration: none;
       }
-    }
   
-    nav {
-      border: 1px solid red;
-
+      h1 {
+        color: black;
+        font-size: 25px;
+      }
+      :hover{
+        text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+      }
+  }
+  
+  nav {
+      border: 1px solid blue; // Remove the red border
+      padding: 1px 0;
+  
       .mainframe-sidenav {
-        border: 1px solid rgb(0, 0, 0);
-        ul {
           display: flex;
+          justify-content: center; // Center the navigation and search bar
+          align-items: center;
+          padding: 0;
+  
+          ul {
+            border: 1px solid orange;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+          }
   
           li {
-            margin-left: 8px;
+            border: 1px solid green;
+            margin: 0 1px;
+          }
   
-            .main-header {
-              display: flex;
-              align-items: center;
-              font-size: 14px;
-            }
-  
-            .icon {
-              margin-left: 5px;
-              transition: transform 0.3s ease; // Apply transition to icon
-            }
-  
-            &:hover .icon {
-              transform: rotate(90deg); // Rotate icon when hovered or active
-            }
-  
-            a {
+          .main-header {
+            border: 1px solid blue;
               text-decoration: none;
-              font-family: 'Kanit', sans-serif;
-              color: #ffffff;
-              padding: 10px;
-              transition: color 0.5s ease;
-              position: relative;
+              color: black; // Remove white color
+              font-weight: bold;
+              font-size: 11px;
+              padding: 5px 5px;
+              transition: background-color 0.3s ease, color 0.3s ease;
   
-              .icon {
-                margin-left: 5px;
-              }
-  
-              &.active,
               &:hover {
-                color: colors.$link-color2;
+                  text-decoration: underline;
+                  
+                  color: black;
               }
-            }
   
-            .submenu {
-              display: none;
-              position: absolute;
-              background-color: colors.$submenu-color;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-              backdrop-filter: blur(5px);
-              width: 200px;
-              flex-direction: row;
-              margin-top: 0px;
-              border-radius: 0 3px 3px 3px;
-  
-              li {
-                margin: 10px;
-                &:hover {
-                  color: colors.$link-color2;
-                }
+              &:focus {
+                  outline: none;
               }
-            }
-  
-            &:hover .submenu {
-              display: block;
-            }
-  
-            &:hover .main-header {
-              border-radius: 3px;
-              color: black;
-              background-color: colors.$background;
-              transition: background-color 0.1s ease-in;
-            }
-  
-            @media (max-width: 795px) {
-              &:hover .submenu {
-                display: none; // Ensure submenu is not shown on hover
-              }
+          }
+      }
+  }
+  // Search bar styling
 
-              &.active .icon {
-                transform: rotate(90deg); // Rotate icon when hovered or active
-              }
-            }
-          }
-        }
-      }
-    }
   
-    .hamburger {
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    &.active span:nth-child(1) {
+      width: 10px;
+      transform: rotate(45deg) translate(11px, 1px);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      width: 10px;
+      transform: rotate(-45deg) translate(11px, -1px);
+    }
+  }
+
+
+
+  @media (max-width: 795px) {
+    display: flex;
+
+    nav {
       display: none;
-      flex-direction: column;
-      cursor: pointer;
-  
-      &.active span:nth-child(1) {
-        width: 10px;
-        transform: rotate(45deg) translate(11px, 1px);
-      }
-  
-      &.active span:nth-child(2) {
-        opacity: 0;
-      }
-  
-      &.active span:nth-child(3) {
-        width: 10px;
-        transform: rotate(-45deg) translate(11px, -1px);
-      }
-    }
-  
-  
-  
-    @media (max-width: 795px) {
-      display: flex;
-  
-      nav {
-        display: none;
-        &.active {
-          display: flex;
-          position: absolute;
-          min-height: 100vh;
-          top: 0;
-          right: 0;
-          width: 100%;
-          background-color: rgba(245, 245, 245, 0.44);
-          backdrop-filter: blur(-10px);
-          flex-direction: row-reverse;
-  
-          .mainframe-sidenav {
-            display: flex;
-            background-color: colors.$submenu-color;
-            width: 212px;
-            overflow-y: auto; // Enable vertical scrolling
-  
-            ul {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              margin-top: 50px;
-  
-              li {
-                width: 100%;
-                margin: 0;
-  
-                .main-header {
-                  display: flex;
-                  width: 100%;
-                  padding: 10px 20px;
-                  cursor: pointer; // Pointer cursor for clickable items
-                }
-              }
-            }
-          }
-        }
-      }
-  
-      .hamburger {
+      &.active {
         display: flex;
-        z-index: 50;
-        // border: 1px solid black;
-        span {
-          height: 1px;
-          width: 15px;
-          background: #ffffff;
-          margin: 2px 0;
-          transition: 0.3s;
-        }
-      }
-    }
-  
-    @media (max-width: 431px) {
-      display: flex;
-  
-      nav {
-        display: none;
-        &.active {
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(245, 245, 245, 0.44);
+        backdrop-filter: blur(-10px);
+        flex-direction: row-reverse;
+
+        .mainframe-sidenav {
           display: flex;
-          position: absolute;
-          min-height: 100vh;
-          top: 0;
-          width: 100%;
-          background-color: colors.$sidebar-color;
-          backdrop-filter: blur(10px);
-  
+          background-color: colors.$submenu-color;
+          width: 212px;
+          overflow-y: auto;
+
           ul {
             width: 100%;
             display: flex;
             flex-direction: column;
             margin-top: 50px;
-  
+
             li {
+              width: 100%;
               margin: 0;
-  
+
               .main-header {
                 display: flex;
+                width: 100%;
                 padding: 10px 20px;
-                cursor: pointer; // Pointer cursor for clickable items
+                cursor: pointer;
               }
             }
           }
         }
       }
-  
-      .hamburger {
-        display: flex;
-        z-index: 50;
-        span {
-          height: 1px;
-          width: 15px;
-          background: #ffffff;
-          margin: 2px 0;
-          transition: 0.3s;
-        }
+    }
+
+    .hamburger {
+      display: flex;
+      z-index: 50;
+      span {
+        height: 1px;
+        width: 15px;
+        background: #ffffff;
+        margin: 2px 0;
+        transition: 0.3s;
       }
     }
   }
+
+  @media (max-width: 431px) {
+    display: flex;
+
+    nav {
+      display: none;
+      &.active {
+        display: flex;
+        position: absolute;
+        min-height: 100vh;
+        top: 0;
+        width: 100%;
+        background-color: colors.$sidebar-color;
+        backdrop-filter: blur(10px);
+
+        ul {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 50px;
+
+          li {
+            margin: 0;
+
+            .main-header {
+              display: flex;
+              padding: 10px 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: flex;
+      z-index: 50;
+      span {
+        height: 1px;
+        width: 15px;
+        background: #ffffff;
+        margin: 2px 0;
+        transition: 0.3s;
+      }
+    }
+  }
+}
   
