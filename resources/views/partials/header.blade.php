@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <header class="header">
@@ -29,10 +29,13 @@
     </nav>
 
      <!-- Search Bar -->
-     <form class="seach-bar" action="/action_page.php">
-        <input type="text" placeholder="Search.." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>    
+     <form class="search-bar" action="/action_page.php">
+        
+        <button type="submit"></button>
+        <input type="text" placeholder="Search" name="search2">
+      </form>
+      
+          
     
     <div class="hamburger" onclick="showSidebar()">
         <span></span>

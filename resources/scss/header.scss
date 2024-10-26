@@ -1,12 +1,13 @@
 @use 'colors';
 
 .header {
-    border: 2px solid green;
+    //border: 2px solid green;
     position: fixed;
     backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-top: 15px;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -19,22 +20,23 @@
     }
   
     #logo {
-      border: 1px solid blue;
+      //border: 1px solid blue;
       a {
           text-decoration: none;
       }
   
       h1 {
         color: black;
+        text-shadow: 6px 6px 3px rgba(0,0,0, 0.3);
         font-size: 25px;
       }
       :hover{
-        text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+        text-shadow: 6px 6px 7px rgba(0,0,0, 0.6);
       }
   }
   
   nav {
-      border: 1px solid blue; // Remove the red border
+      //border: 1px solid blue; // Remove the red border
       padding: 1px 0;
   
       .mainframe-sidenav {
@@ -44,7 +46,7 @@
           padding: 0;
   
           ul {
-            border: 1px solid orange;
+            //border: 2px solid orange;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -52,23 +54,23 @@
           }
   
           li {
-            border: 1px solid green;
-            margin: 0 1px;
+            //border: 1px solid green;
+            margin: 0 6px;
           }
   
           .main-header {
-            border: 1px solid blue;
+              //border: 1px solid blue;
               text-decoration: none;
               color: black; // Remove white color
               font-weight: bold;
-              font-size: 11px;
+              font-size: 13px;
               padding: 5px 5px;
               transition: background-color 0.3s ease, color 0.3s ease;
   
               &:hover {
                   text-decoration: underline;
-                  
-                  color: black;
+                  //text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+                  color: rgb(3, 120, 20);
               }
   
               &:focus {
@@ -77,8 +79,44 @@
           }
       }
   }
-  // Search bar styling
 
+  // Search bar styling
+  .search-bar {
+    display: flex;                   // Use flexbox to align input and button horizontally
+    max-width: 600px;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;                // Ensures no overflow of button or input
+    box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.3);  // Optional shadow for a subtle effect
+  
+    input[type="text"] {
+      width: 100%;                   // Full width for the input field
+      padding: 6px 6px;            // Padding for text
+      font-size: 12px;
+      border: none;                // Remove border
+      border-radius: 25px 0 0 25px;  // Rounded left corners
+      box-sizing: border-box;
+      outline: none;
+      text-align: right;             // Right-aligns placeholder text
+  
+      &::placeholder {
+        color: #000000;
+      }
+    }
+  
+    button {
+      background: url('/public/images/client/magnifyingglass.png') no-repeat center; // Path to your icon image
+      background-size: 11px 11px;    // Size the icon as needed
+      width: 45px;                   // Button width, adjust to fit the icon comfortably
+      border: none;                  // Remove border
+      border-radius: 0 25px 25px 0;  // Rounded right corners
+      cursor: pointer;
+      outline: none;
+    }
+  }
+  
+  
+  
   
   
   .hamburger {
