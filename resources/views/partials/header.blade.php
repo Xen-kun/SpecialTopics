@@ -5,7 +5,7 @@
 <header class="header">
     <div id="logo">
         <a href="{{ url('/') }}">
-            <h1>Panggaldaw Xpress</h1>
+            <h1>Pangaldaw Xpress</h1>
         </a>           
     </div>
     

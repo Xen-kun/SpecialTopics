@@ -8,8 +8,10 @@
     @vite(['resources/css/app.css', 'resources/scss/main.scss', 'resources/js/app.js'])
 </head>
 <body>
+    {{-- header --}}
     @include('partials.header')
 
+    {{-- SECTION 1 --}}
     <section class="section1">
         <div class="box-container">
 
@@ -53,7 +55,7 @@
                 </div>
 
                 <div class="todays-dish">
-                    <a href="#">
+                    <a href="{{ route('under.construction') }}">
                         <p>Check for today's dish →</p>
                     </a>
                 </div>
@@ -61,17 +63,47 @@
             </div>
 
             {{-- Right Side Image --}}
-            <div class="right-image">
+            {{-- <div class="right-image">
                 <img src="{{ asset('images/client/right-side-design.png') }}" alt="Right Side Design">
+            </div> --}}
+        </div>
+    </section>
+
+    {{-- SECTION 2--}}
+    <section id="section2">
+        <div class="sect2-A">
+            <div class="layer1">
+                <h1>MORE THAN 1,000 DISHES TO ORDER!</h1>
+            </div>
+            
+            <div class="layer2">
+                <h5>Welcome to The Local Network of Food Ordering & Delivery</h5>
+            </div>
+        </div>
+        
+        <div class="sect2-B">
+            <div class="B-2-Left">
+                <div class="layer1">
+                    <h2>Your Favorite Food Delivery Partner</h2>
+                </div>
+                <div class="layer2">
+                    <h4>The food at your doorstep. Why starve when you have us. <br>
+                        You hunger partner. Straight out of the oven to your doorstep. </h4>
+                </div>
+                <div class="layer3">
+                    {{-- create an input bar and inside an input bar,
+                    there's a box on the right with 50% border.
+                    inside the box, put a text "order now".
+                    inside the text input bar, adda dummy text "enter your deliver location" --}}
+                </div>
+            </div>
+            <div class="B-2-Right">
+                <img src="{{asset('/images/client/broom-broom.png')}}" alt="">
             </div>
         </div>
     </section>
-    
-    <section id="section2">
-        this is section 2
-        <h1>Hatdog kong malaki</h1>
-    </section>
 
+    {{-- footer --}}
     @include('partials.footer')
 </body>
 </html>
