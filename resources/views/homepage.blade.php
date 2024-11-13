@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.bunny.net/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
-
     <title>Veloce</title>
     @vite(['resources/css/app.css', 'resources/scss/main.scss', 'resources/js/app.js'])
 </head>
@@ -91,10 +90,10 @@
                         You hunger partner. Straight out of the oven to your doorstep. </h4>
                 </div>
                 <div class="layer3">
-                    {{-- create an input bar and inside an input bar,
-                    there's a box on the right with 50% border.
-                    inside the box, put a text "order now".
-                    inside the text input bar, adda dummy text "enter your deliver location" --}}
+                    <form class="input-bar">
+                        <input type="text" placeholder="Enter your delivery location" />
+                        <button type="submit" class="order-btn">Order Now</button>
+                    </form>
                 </div>
             </div>
             <div class="B-2-Right">

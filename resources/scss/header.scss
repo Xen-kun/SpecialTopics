@@ -82,22 +82,22 @@
 
   // Search bar styling
   .search-bar {
-    display: flex;                   // Use flexbox to align input and button horizontally
+    display: flex;                   
     max-width: 600px;
     background-color: white;
     border-radius: 25px;
-    overflow: hidden;                // Ensures no overflow of button or input
-    box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.3);  // Optional shadow for a subtle effect
+    overflow: hidden;              
+    box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.3); 
   
     input[type="text"] {
-      width: 100%;                   // Full width for the input field
-      padding: 6px 6px;            // Padding for text
+      width: 100%;                  
+      padding: 6px 6px;            
       font-size: 12px;
-      border: none;                // Remove border
-      border-radius: 25px 0 0 25px;  // Rounded left corners
+      border: none;                
+      border-radius: 25px 0 0 25px;  
       box-sizing: border-box;
       outline: none;
-      text-align: right;             // Right-aligns placeholder text
+      text-align: right;             
   
       &::placeholder {
         color: #000000;
@@ -105,11 +105,11 @@
     }
   
     button {
-      background: url('/public/images/client/magnifyingglass.png') no-repeat center; // Path to your icon image
-      background-size: 11px 11px;    // Size the icon as needed
-      width: 45px;                   // Button width, adjust to fit the icon comfortably
-      border: none;                  // Remove border
-      border-radius: 0 25px 25px 0;  // Rounded right corners
+      background: url('/public/images/client/magnifyingglass.png') no-repeat center; 
+      background-size: 11px 11px;   
+      width: 45px;                  
+      border: none;                  
+      border-radius: 0 25px 25px 0;  
       cursor: pointer;
       outline: none;
     }
