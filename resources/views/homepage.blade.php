@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.bunny.net/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Veloce</title>
-    @vite(['resources/css/app.css', 'resources/scss/main.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('dist/assets/app.css') }}">
 </head>
 <body>
     {{-- header --}}
@@ -102,6 +102,7 @@
         </div>
     </section>
 
+    <script src="{{ asset('dist/assets/app.js') }}" defer></script>
     {{-- footer --}}
     @include('partials.footer')
 </body>
