@@ -7,5 +7,3 @@ use App\Http\Controllers\FoodController;
 Route::get('/', function(){
     return view('homepage');
 })->name('homepage');
-
-Route::view('/under-construction', 'under-construction')->name('under.construction');
