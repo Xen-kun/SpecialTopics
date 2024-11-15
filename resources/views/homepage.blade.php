@@ -5,6 +5,16 @@
     <link href="https://fonts.bunny.net/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Veloce</title>
     <link rel="stylesheet" href="{{ asset('dist/assets/app.css') }}">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4CT93RWVC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q4CT93RWVC');
+    </script>
 </head>
 <body>
     {{-- header --}}
