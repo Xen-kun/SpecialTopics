@@ -5,7 +5,7 @@
     <link href="https://fonts.bunny.net/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Veloce</title>
     <link rel="stylesheet" href="{{ asset('/dist/assets/app.css') }}">
-    {{-- @vite(['resources/scss/main.scss', 'resources/js/app.js']); --}}
+    @vite(['resources/scss/main.scss', 'resources/js/app.js']);
 </head>
 <body>
     {{-- header --}}
