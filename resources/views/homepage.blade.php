@@ -63,9 +63,9 @@
             </div>
 
             {{-- Right Side Image --}}
-            {{-- <div class="right-image">
+            <div class="right-image">
                 <img src="{{ asset('images/client/right-side-design.png') }}" alt="Right Side Design">
-            </div> --}}
+            </div>
         </div>
     </section>
 
