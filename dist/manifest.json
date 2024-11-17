@@ -7,6 +7,12 @@
     "file": "assets/magnifyingglass-BP6vFd74.png",
     "src": "public/images/client/magnifyingglass.png"
   },
+  "resources/css/app.css": {
+    "file": "assets/app-l0sNRNKZ.js",
+    "name": "app",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
     "file": "assets/app-z8A_VDJZ.js",
     "name": "app",
