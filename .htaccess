@@ -1,45 +1,13 @@
-# Enable Rewrite Engine
+<IfModule mod rewrite.c>
+Options +FollowSmyLinks
 RewriteEngine On
 
-# Redirect WWW to Non-WWW
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !^/public/
 
-# Redirect HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{REQUEST_FILANAME} !-d
+RewriteCond %{REQUEST_FILANAME} !-f
 
-# Enable Pretty Permalinks (Example for Laravel)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [L]
-
-# Custom Error Pages
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
-ErrorDocument 500 /500.html
-
-# Protect .htaccess File
-<Files .htaccess>
-    Order Allow,Deny
-    Deny from all
-</Files>
-
-# Disable Directory Listing
-Options -Indexes
-
-# MIME Types Security
-AddType application/x-httpd-php .php .phtml
-AddType text/plain .htaccess
-
-# Set Cache-Control Headers
-<IfModule mod_headers.c>
-    <FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js|woff|woff2|ttf|svg|eot|pdf|html|xml)$">
-        Header set Cache-Control "max-age=31536000, public"
-    </FilesMatch>
+RewriteRule ^(.*)$ /public/$1
+#RewriteRule ^ index.php [L]
+RewriteRule ^(/)?$ public/index.php [L]
 </IfModule>
-
-# Prevent Hotlinking
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?pangaldawxpress\.com/ [NC]
-RewriteRule \.(jpg|jpeg|png|gif|bmp)$ - [F,NC]
