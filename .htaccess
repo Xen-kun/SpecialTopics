@@ -1,13 +1,17 @@
-<IfModule mod rewrite.c>
-Options +FollowSmyLinks
-RewriteEngine On
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
 
-RewriteCond %{REQUEST_URI} !^/public/
+    # Force HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteCond %{REQUEST_FILANAME} !-d
-RewriteCond %{REQUEST_FILANAME} !-f
+    # Ensure requests are routed to the /public directory
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ /public/$1 [L]
 
-RewriteRule ^(.*)$ /public/$1
-#RewriteRule ^ index.php [L]
-RewriteRule ^(/)?$ public/index.php [L]
+    # Route requests to the Laravel index.php
+    RewriteRule ^(/)?$ public/index.php [L]
 </IfModule>
