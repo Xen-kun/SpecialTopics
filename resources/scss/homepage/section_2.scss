@@ -1,79 +1,151 @@
-#section2{
+.section2 {
+    margin-top: 5rem;
+    border: 1px dashed blue;
     background: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    .sect2-A{
+    .sect2-A {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .layer1, .layer2{
-            // border: 1px solid green;
-            
-            h1, h5{
+        .layer1-more-than,
+        .layer2-welcome {
+            h1,
+            h5 {
                 padding: 0;
                 margin: 0;
             }
-            h5{
+            h5 {
                 font-weight: 100;
             }
         }
-        
     }
 
-    .sect2-B{
-        display: flex;
+    .sect2-B {
+        border: 1px dashed blue;
+        display: inline;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
-        .B-2-Left{
+        .B-2-Left {
+            width: 70%;
+            border: 1px dashed blue;
             align-items: start;
+            justify-self: center;
 
             .layer3 {
                 display: flex;
                 justify-content: start;
                 padding: 0px;
-            
+
                 .input-bar {
-                    display: flex;                  
+                    display: flex;
                     background-color: white;
                     border-radius: 25px;
-                    overflow: hidden;              
-                
+                    overflow: hidden;
+
                     input[type="text"] {
                         margin-right: 5px;
-                        width: 200px;                 
-                        padding: 15px 10px;           
+                        width: 200px;
+                        padding: 15px 10px;
                         font-size: 12px;
-                        border: none;                
-                        border-radius: 25px 0 0 25px; 
-                    
+                        border: none;
+                        border-radius: 25px 0 0 25px;
                         outline: none;
-                        text-align: left;            
+                        text-align: left;
                     }
-    
-                    button{
+
+                    button {
                         margin: 4px;
                         font-weight: 600;
                         border: none;
                         background-color: rgb(90, 202, 90);
-                        border-radius: 25px; 
+                        border-radius: 25px;
                     }
                 }
             }
         }
-
-        .B-2-Right{
-            img{
-                height: 450px;
-                width: auto;
+        
+        .B-2-Right {
+            // border: 1px dashed blue;
+            // width: 50%;
+            // margin: 0;
+            // padding: 0;
+            // display: flex;
+            // align-items: center;
+            // justify-content: flex-end;
+    
+            img {
+                width: 60%;
+                border: 1px dashed blue;
+                height: auto;
             }
         }
     }
-    
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .sect2-B {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .B-2-Left {
+        .input-bar input[type="text"] {
+            width: 150px; /* Reduce input size */
+            padding: 10px 8px;
+        }
+        .input-bar button {
+            padding: 8px 16px; /* Adjust button size */
+        }
+    }
+
+    .B-2-Right img {
+        height: 300px; /* Reduce image size */
+    }
+}
+
+@media (max-width: 768px) {
+    .sect2-B {
+        flex-direction: column; /* Stacks left and right sections */
+    }
+
+    .B-2-Left, .B-2-Right {
+        flex: none; /* Resets flex properties */
+        width: 100%; /* Full width for each section */
+        justify-content: center; /* Centers content in smaller screens */
+    }
+
+    .B-2-Right img {
+        max-width: 80%; /* Resize the image for smaller screens */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sect2-B {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px; /* Add consistent spacing */
+    }
+
+    .B-2-Left {
+        .input-bar input[type="text"] {
+            width: 100%; /* Full width for smaller screens */
+        }
+        .input-bar button {
+            width: 100%; /* Full width for buttons */
+        }
+    }
+
+    .B-2-Right img {
+        height: 150px; /* Adjust image size */
+    }
 }

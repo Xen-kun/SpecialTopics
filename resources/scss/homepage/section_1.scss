@@ -1,183 +1,166 @@
 .section1 {
-    // background-image: url('/public/images/client/bg-design-removebg-preview.png');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-color: rgba(245, 21, 32, 0.13);
-    height: 100vh;
+    border: 2px solid red;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: inherit;
+    height: 100%;
+
 
     .box-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        height: 100%;
+        height: inherit;
         width: 100%;
-    }
 
-    .left-text {
-        flex: 1;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        
-        .fast-delivery, .easy-pickup, .make-order, .bring-pasto, .app-play-store, .todays-dish{
-            margin-left: 120px;
-        }
-
-        // .fast-delivery {
-        //     border: 2px solid rgb(60, 37, 37);
-        //     margin-top: 90px;
-        //     margin-bottom: 5px;
+        .left-text {
+            position: relative;
+            z-index: 1;
+            border: 2px dashed blue;
             
-        //     .fading-box{
-        //         border: 2px solid rgb(13, 255, 0);
-        //         display: flex; // Ensure the width adapts to the content
-        //         align-items: center;
-        //         width: 150px; // Automatically adjusts to the width of the content
-        //         background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-        //         p {
-        //             font-size: 15px;
-        //             margin: 0;
-        //             padding: 0;  
-        //         }
-            
-        //         img {
-        //             border: 1px solid black;
-        //             margin-left: 10px; // Adds space between the text and the image
-        //             width: auto;       // Adjusts width automatically to match the height of the font
-        //             height: 1.99rem;     // Matches the image height to the font size
-        //         }
-        //     }
-        // }
-
-        .fast-delivery {
-            border-radius: 0 50px 50px 0;
-            margin-top: 120px;
-            padding: 3px;
-            margin-bottom: 5px;
-            display: flex; 
-            align-items: center;
-            width: 140px;
-            background: linear-gradient(to left, rgba(0, 0, 0, 0.45) -0%, rgba(0, 0, 0, 0) 100%);
-            
-            p {
-                font-size: 13px;
-                margin: 0 0 0 10px;
-                padding: 0;
-            }
-                
-            img {
-                margin: 0;
-                padding: 0;
-                margin-left: 10px;
-                width: auto; 
-                height: 1.5rem;  
-            }
-        }
-        
-        
-        .easy-pickup{
-            padding: 0;
-            p {
-                font-weight: bold;
-                font-size: 40px;
-                margin: 0 0 10px 0;
-                padding: 0;
-            }            
-        }
-
-        .make-order {
+            padding-left: 10%;
             display: flex;
-            justify-content: left;
+            justify-content: right;
             align-items: center;
-        
-            .order-btn {
-                background-color: #2437c9;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                font-size: 12px;
-                border-radius: 50px;
-                cursor: pointer;
-                transition: background-color 0.3s ease, color 0.3s ease; 
-        
-                &:hover {
-                    background-color: #4ca948; 
-                    color: black;
+    
+            .left-text-center {
+                border: 2px solid orange;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+    
+                .fast-delivery {
+                    border-radius: 0 50px 50px 0;
+                    margin-top: 120px;
+                    padding: 3px;
+                    margin-bottom: 5px;
+                    display: flex;
+                    align-items: center;
+                    width: 140px;
+                    background: linear-gradient(to left, rgba(0, 0, 0, 0.45) -0%, rgba(0, 0, 0, 0) 100%);
+    
+                    p {
+                        font-size: 13px;
+                        margin: 0 0 0 10px;
+                        padding: 0;
+                    }
+    
+                    img {
+                        margin: 0;
+                        padding: 0;
+                        margin-left: 10px;
+                        width: auto;
+                        height: 1.5rem;
+                    }
                 }
-        
-                &:focus {
-                    outline: none;
-                }
-            }
-        }
-        
-        
-        .bring-pasto{
-            margin-top: 40px;
-
-            p{
-                font-weight: bold;
-                margin: 0;
-            }
-        }
-
-        .app-play-store {
-            margin-top: 10px;
-        
-            a {
-                text-decoration: none;
-                display: inline-block;
-                margin-right:10px;
-        
-                #play-store,
-                #app-store {
+    
+                .easy-pickup {
                     padding: 0;
-                    height: 40px;
+    
+                    p {
+                        font-weight: bold;
+                        font-size: 38px;
+                        margin: 0 0 10px 0;
+                        padding: 0;
+                    }
+                }
+    
+                .make-order {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+    
+                    .order-btn {
+                        background-color: #2437c9;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        font-size: 12px;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, color 0.3s ease;
+    
+                        &:hover {
+                            background-color: #4ca948;
+                            color: black;
+                        }
+    
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+    
+                .bring-pasto {
+                    margin-top: 40px;
+    
+                    p {
+                        font-weight: bold;
+                        margin: 0;
+                    }
+                }
+    
+                .app-play-store {
+                    margin-top: 10px;
+    
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                        margin-right: 10px;
+    
+                        #play-store,
+                        #app-store {
+                            padding: 0;
+                            height: 40px;
+                        }
+                    }
+                }
+    
+                .todays-dish {
+                    margin-top: 80px;
+    
+                    a {
+                        font-size: 13px;
+                        text-decoration: none;
+                        color: rgb(91, 91, 219);
+                        width: auto;
+                        display: inline-block;
+    
+                        &:hover {
+                            color: rgb(28, 28, 172);
+                            text-decoration: underline;
+                        }
+    
+                        p {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
-        
-        
-
-        .todays-dish {
-            margin-top: 80px;
-        
-            a {
-                font-size: 13px;
-                text-decoration: none;
-                color: rgb(91, 91, 219);
-                width: auto;
-                display: inline-block;
-        
-                &:hover {
-                    color: rgb(28, 28, 172);
-                    text-decoration: underline;
-                }
-        
-                p {
-                    margin: 0;
-                    padding: 0;
-                }
+    
+        .right-image {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0; // Make the div take the full screen
+            display: flex;
+            justify-content: center; // Center the image horizontally
+            align-items: center; // Center the image vertically
+            overflow: hidden; // Hide the overflowing parts of the image
+          
+            img {
+              display: block; // Remove extra space around the image
+              width: 100%; // Ensure image takes full width of its container
+              height: 100%; // Ensure image takes full height of its container
+              object-fit: cover; // Ensures image is scaled properly to cover the container, without stretching
+              object-position: center center; // Keep the image centered
             }
-        }        
+          }
+                 
     }
-
-    // .right-image {
-    //     flex: 1;
-    //     margin: 0;
-    //     padding: 0;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: flex-end; 
-        
-    //     img {
-    //         width: 70%;
-    //         height: auto;
-    //         margin: 0
-    //     }
-    // }
 }
+
+/* Media Queries for Responsiveness */

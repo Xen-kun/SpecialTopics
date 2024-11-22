@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shops</title>
-    @vite(['resources/scss/main.scss', 'resources/css/app.css', 'resources/js/app.js']);
+    @vite(['resources/scss/main.scss', 'resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    
+    <h1>HANGGANG DITO PA BA NAMAN? KALIKOT KA RIN EH</h1>
 </body>
 </html>

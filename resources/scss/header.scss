@@ -3,7 +3,7 @@
 .header {
     //border: 2px solid green;
     position: fixed;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,7 +27,7 @@
   
       h1 {
         color: black;
-        text-shadow: 6px 6px 3px rgba(0,0,0, 0.3);
+        text-shadow: 5px 5px 6px rgba(78, 37, 37, 0.3);
         font-size: 25px;
       }
       :hover{
@@ -82,7 +82,8 @@
 
   // Search bar styling
   .search-bar {
-    display: flex;                   
+    margin-top: 15px;
+    display: flex;               
     max-width: 600px;
     background-color: white;
     border-radius: 25px;
@@ -91,7 +92,7 @@
   
     input[type="text"] {
       width: 100%;                  
-      padding: 6px 6px;            
+      padding: 8px 15px;            
       font-size: 12px;
       border: none;                
       border-radius: 25px 0 0 25px;  
@@ -114,10 +115,7 @@
       outline: none;
     }
   }
-  
-  
-  
-  
+
   
   .hamburger {
     display: none;

@@ -16,13 +16,13 @@
                     <a href="{{ url('/') }}" class="main-header">Home</a>
                 </li>
                 <li>
-                    <a href="" class="main-header">Service</a>
+                    <a href="{{ url('/service') }}" class="main-header">Service</a>
                 </li>
                 <li>
-                    <a href="" class="main-header">Menu</a>
+                    <a href="{{ url('/menu')}}" class="main-header">Menu</a>
                 </li>
                 <li>
-                    <a href="" class="main-header">Shops</a>
+                    <a href="{{ url('/shops')}}" class="main-header">Shops</a>
                 </li>
             </ul>
         </div>
