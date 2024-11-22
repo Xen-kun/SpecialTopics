@@ -16,12 +16,12 @@ Route::get('/service', function () {
 
 // Route for the Menu page
 Route::get('/menu', function () {
-    return view('pages.menu');
+    return view('menu');
 });
 
 // Route for the Shops page
 Route::get('/shops', function () {
-    return view('pages.shops');
+    return view('shops');
 });
 
 
