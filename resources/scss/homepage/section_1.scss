@@ -1,5 +1,4 @@
 .section1 {
-    border: 2px solid red;
     display: flex;
     position: inherit;
     height: 100%;
@@ -14,15 +13,12 @@
         .left-text {
             position: relative;
             z-index: 1;
-            border: 2px dashed blue;
-            
             padding-left: 10%;
             display: flex;
             justify-content: right;
             align-items: center;
     
             .left-text-center {
-                border: 2px solid orange;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;

@@ -18,13 +18,6 @@
             {{-- Left Side Design --}}
             <div class="left-text">
                 <div class="left-text-center">
-                    {{-- Semi Button --}}
-                    {{-- <div class="fast-delivery">
-                        <div class="fading-box">
-                            <p>Fast Delivery</p>
-                            <img src="{{ asset('images/client/delivery.png') }}" alt="Fast Delivery Icon">
-                        </div>
-                    </div> --}}
 
                     <div class="fast-delivery">
                         <p>Fast Delivery</p>
@@ -33,7 +26,7 @@
                     
 
                     <div class="Easy-pickup">
-                        <p>Fast Deliver & <br>Easy Pickup</p>
+                        <p>Fast Delivery & <br>Easy Pickup</p>
                     </div>
 
                     <div class="make-order">
