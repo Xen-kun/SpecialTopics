@@ -1,3 +1,3 @@
 <footer class="footer">
-    <p>Copyright © Veloce, Inc. 2024. Some Rights Reserved. Final project in CMPSC195(Special Topics) <a href="#"><u>Privacy at XenTech</u></a>.</p>
+    <p>Copyright © Veloce, Inc. 2024. Some Rights Reserved. <a href="#"><u>Hatdog mong malungkot</u></a>.</p>
 </footer>

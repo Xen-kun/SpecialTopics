@@ -1,4 +1,6 @@
+/.phpunit.cache
 /node_modules
+!/public/build
 /public/hot
 /public/storage
 /storage/*.key
@@ -6,7 +8,7 @@
 .env
 .env.backup
 .env.production
-.phpactor.json  
+.phpactor.json
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
@@ -17,4 +19,3 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
-/public/build   # <-- Do NOT ignore the build folder for Vite assets
