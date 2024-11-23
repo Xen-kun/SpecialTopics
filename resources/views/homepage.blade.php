@@ -67,9 +67,9 @@
 
 
             {{-- Right Side Image --}}
-            <div class="right-image">
+            {{-- <div class="right-image">
                 <img src="{{ asset('images/client/hatdog.png') }}" alt="Right Side Design">
-            </div>
+            </div> --}}
         </div>
     </section>
 
