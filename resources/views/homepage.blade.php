@@ -16,6 +16,7 @@
     </script>
 </head>
 <body>
+    <script src="app.js" type="module"></script>
 
     {{-- header --}}
     @include('partials.header')
