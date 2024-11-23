@@ -8,13 +8,6 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: `@import "resources/scss/main.scss";`
-            }
-        }
-    },
     build: {
         outDir: 'dist',
     },
