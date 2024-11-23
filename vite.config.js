@@ -4,11 +4,18 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'], // Entry files
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `@import "resources/scss/main.scss";`
+            }
+        }
+    },
     build: {
-        outDir: 'dist', // The folder where the production files will be generated
+        outDir: 'dist',
     },
 });
