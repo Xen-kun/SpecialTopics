@@ -1,9 +1,9 @@
 // @import 'colors.scss';
-@forward 'colors.scss';
-@forward 'header.scss';
-@forward 'homepage/section_1.scss';
-@forward 'homepage/section_2.scss';
-@forward 'footer.scss';
+@use 'colors.scss';
+@use 'header.scss';
+@use 'homepage/section_1.scss';
+@use 'homepage/section_2.scss';
+@use 'footer.scss';
 
 
 
