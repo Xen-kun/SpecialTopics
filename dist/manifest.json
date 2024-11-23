@@ -10,5 +10,10 @@
     "name": "app",
     "src": "../resources/js/app.js",
     "isEntry": true
+  },
+  "resources/scss/main.scss": {
+    "file": "assets/main-Dhm-gARX.css",
+    "src": "../resources/scss/main.scss",
+    "isEntry": true
   }
 }
