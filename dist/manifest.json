@@ -2,13 +2,13 @@
   "resources/css/main.css": {
     "file": "assets/main-l0sNRNKZ.js",
     "name": "main",
-    "src": "./resources/css/main.css",
+    "src": "../resources/css/main.css",
     "isEntry": true
   },
   "resources/js/main.js": {
     "file": "assets/main-z-Rg4TxU.js",
     "name": "main",
-    "src": "./resources/js/main.js",
+    "src": "../resources/js/main.js",
     "isEntry": true
   }
 }
