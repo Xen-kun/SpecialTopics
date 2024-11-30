@@ -1,14 +1,14 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-l0sNRNKZ.js",
-    "name": "app",
-    "src": "./resources/css/app.css",
+  "resources/css/main.css": {
+    "file": "assets/main-l0sNRNKZ.js",
+    "name": "main",
+    "src": "./resources/css/main.css",
     "isEntry": true
   },
-  "resources/js/app.js": {
-    "file": "assets/app-z-Rg4TxU.js",
-    "name": "app",
-    "src": "./resources/js/app.js",
+  "resources/js/main.js": {
+    "file": "assets/main-z-Rg4TxU.js",
+    "name": "main",
+    "src": "./resources/js/main.js",
     "isEntry": true
   }
 }
