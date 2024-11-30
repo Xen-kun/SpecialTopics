@@ -1,8 +1,8 @@
 
 @import 'colors.scss';
 @import 'header.scss';
-@import './homepage/section_1.scss';
-@import './homepage/section_2.scss';
+@import 'section_1.scss';
+@import 'section_2.scss';
 @import 'footer.scss';
 
 
@@ -16,7 +16,6 @@ body {
     background-image: url('/public/images/client/BG-Color.png');
     background-color: #EDEDED; 
     height: auto;
-    border: 2px solid black;
 }
 ::-webkit-scrollbar{
     display: none;

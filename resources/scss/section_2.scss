@@ -1,11 +1,11 @@
 .section2 {
     margin-top: 5rem;
-    border: 1px dashed blue;
     background: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
 
     .sect2-A {
         display: flex;
@@ -27,17 +27,21 @@
     }
 
     .sect2-B {
-        border: 1px dashed blue;
-        display: inline;
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        padding: auto;
 
         .B-2-Left {
-            width: 70%;
-            border: 1px dashed blue;
-            align-items: start;
-            justify-self: center;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+            padding: 0 0 0 12rem;
+
 
             .layer3 {
                 display: flex;
@@ -80,10 +84,14 @@
             // display: flex;
             // align-items: center;
             // justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 50%;
+            padding: auto;
     
             img {
                 width: 60%;
-                border: 1px dashed blue;
                 height: auto;
             }
         }
