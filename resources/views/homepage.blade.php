@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.bunny.net/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Veloce</title>
-    @vite(['resources/scss/main.scss', 'resources/js/app.js'])
+    @vite(['resources/css/main.scss', 'resources/js/app.js'])
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NBBDKGW5MP"></script>
     <script>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="B-2-Right">
-                <img src="{{asset('public/images/client/broom-broom.png')}}" alt="">
+                <img src="{{asset('/images/client/broom-broom.png')}}" alt="">
             </div>
         </div>
     </section>
