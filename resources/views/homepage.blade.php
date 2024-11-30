@@ -16,7 +16,6 @@
     </script>
 </head>
 <body>
-    <script src="app.js" type="module"></script>
 
     {{-- header --}}
     @include('partials.header')
@@ -108,7 +107,6 @@
         </div>
     </section>
 
-    <script src="{{ asset('dist/assets/app.js') }}" defer></script>
     {{-- footer --}}
     @include('partials.footer')
 </body>
