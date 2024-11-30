@@ -1,10 +1,9 @@
-// @use 'colors.scss';
-@use 'colors.scss';
-@use 'header.scss';
-@use 'homepage/section_1.scss';
-@use 'homepage/section_2.scss';
-@use 'footer.scss';
 
+@import 'colors.scss';
+@import 'header.scss';
+@import 'homepage/section_1.scss';
+@import 'homepage/section_2.scss';
+@import 'footer.scss';
 
 
 body {
