@@ -30,7 +30,7 @@
 
                     <div class="fast-delivery">
                         <p>Fast Delivery</p>
-                        <img src="{{ asset('/public/images/client/delivery.png') }}" alt="Fast Delivery Icon">
+                        <img src="{{ asset('images/client/delivery.png') }}" alt="Fast Delivery Icon">
                     </div>
                     
 
