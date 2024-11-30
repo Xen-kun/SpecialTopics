@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="B-2-Right">
-                <img src="{{asset('/images/client/broom-broom.png')}}" alt="">
+                <img src="{{asset('public/images/client/broom-broom.png')}}" alt="">
             </div>
         </div>
     </section>
